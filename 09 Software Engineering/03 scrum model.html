@@ -1,0 +1,217 @@
+<!-- SCRUM model:
+
+Emphasize the set of software pattern:
+1) Backlog ==> Requirements called as backlog and if do 1 requirement then remaining are backlog.
+2) Sprint ==> Increment called as sprint.
+3) Scrum meeting  ==> Daily meeting of the team. For checking the progress of the project.
+
+Process of Scrum:
+1) We prioritize the requirement from the customer.
+2) Then we select highly priorty sprint from the backlog. 
+3) Selected sprint divided into diffrent tasks and assigned to the developer.
+4) Each sprint of 30 days
+5) Daily meeting of the team. For checking the progress of the project.
+6) After each sprint show some functionality of the sprint.
+
+Scrum Roles:
+1) Product Owner
+2) Scrum Master
+3) Scrum Team
+Everyone else is not part of scrum.
+
+Scrum practices:
+1) The Sprint planning meeting ==> Prirtize by owner and team do commit the delivering of sprint
+2) The Sprint ==> Itself sprint.
+3) Sprint review meeting (weather you aciheve the sprint goal or not. At the end of sprint)
+==> Time for this practice is 1 hour prepartion and  4 hour meeting. Team demontrate the increment to owner. Should be live not ppt.
+4) Daily Scrum ==> 15 Mint time. Team and Scrum master only. What have you accomplished since yesterday? Are your Sprint backlog estimates accurate? What are you working on today? Is there anything blocking you?
+Everyone else is not part of scrum.
+
+Sprint Retrospective:
+
+=> Time boxed to three hours
+=> Team, Scurm master and owner (optionally) review the last sprint.
+=> What went well?
+=> What could be improved?
+=> Actionalable items presented to owner for prioritizing  as non functional requirement.
+
+
+Scrum Artifacts:
+
+=> The product backlog (diagram in lec)
+=> The Sprint Backlog (diagram in lec)
+=> The Sprint Burndown chart (diagram in lec)
+=> product increment 
+Everyone else is not part of scrum.
+
+
+Product increment :
+=> Deliver measurable value
+=> "Potentially shippable"... The proceess can be halted after every sprint and there will be some value. some ROI.
+=> Must be a product not matter incomplete
+
+
+Avoid Scrum:
+If Your company already using some model and they are good with it then you should not use scrum.
+If your project type is like that it can't be divided then avoid scrum.
+If owner require a lot of documentation and planing then avoid scrum.
+If noOne agree on scrum then avoid scrum.
+Management practices embrace 'do it now and forget what i told you yesterday.' if this case then avoid scrum.
+
+NOTE:
+Scrum follow all the principle of agile and that's why it is agile model.
+When to use agile model:
+If customer not available for your each increment or scrum then not use it.
+Experts of architecture and designer are required
+If project owner require a lot of documentation and planing then not use it. -->
+
+
+
+
+
+<!-- 
+  Cohesion and Coupling
+  Cohesion is the relationship within the module. Should be higher.
+  Types of cohesion from high to low:
+  Functional cohesion:
+    1) Function should be related to other function.
+   Sequential cohesion:
+    1) Next function should be related to previous function.
+    Communicatioanl cohesion: 
+    1) Elements contributes to activites that use same data. e.g; Account No
+    Procedural cohesion:
+    1) Simple sequence of steps. Not require previous function for next.
+    Temporal cohesion:
+    1) When elements of module are organized such that they are processed at a similar point in time, it is called temporal cohesion
+    Logical cohesion:
+    1) When logicaly categorized eleements are put togetoher into a module.
+    Co-incredenatal cohesion:
+    1) unplanned and random
+
+
+  Coupling is the relationship between the modules. Should be lower.
+  Low coupling can be acheived by these steps:
+  1) Eleminating unnecessary relationship between modules.
+  2) Reducing the number of necessary relationships.
+  3) Easing the tightness of necessary relationships.
+
+  Types of coupling from Best to low:
+  1) Data coupling:
+        Modules intract with each other through data.
+   2) Stamp coupling: 
+       Share same data structure and work on doffrent part of it.
+   3) Control coupling:
+        Modules intract with each other through control like flag.
+   4) Common Coupling:
+        Modules intract with each other through global data.
+    5) Content coupling:
+        A module can directly access the data of another module and can  modify.
+NOTE: Data coupling just pass data while content can modify data.
+
+
+
+SCM:
+In Software Engineering, Software Configuration Management(SCM) is a process to systematically manage, organize, and control
+ the changes in the documents, codes, and other entities during the Software Development Life Cycle. The primary goal is to
+  increase productivity with minimal mistakes.
+
+Version: That have some changes in previous one.
+Release: instance distributed to customers.
+Variant: same functions but design of hardware and software get better.
+
+
+Validation:
+ Are you building the right product?   Meets the customer requirement. Done in the end.
+ Verification:
+    Are you building the  product right?   Are you following the right process for building best app?
+Testing:
+    Product is tested but not by developer.
+Debugging:
+    Product is debugged by developer.
+
+
+==> Testing:
+
+Unit testing:  single module or code tested.
+Integration testing:  after whole module,design testing.
+validation testing:  After total module that it meets user requirement, is it working fine.
+System testing: After implementiom testing that the things going good.
+
+
+Integration testing types:
+ TOP DOWN testing:
+ Top Down Integration Testing is a method in which integration testing takes place from top to bottom following the control 
+ flow of software system. The higher level modules are tested first and then lower level modules are tested and integrated in
+  order to check the software functionality.
+  In Top Down Integration testing approach the main module is designed at first then the submodules/subroutines are called from it.
+
+
+BOTTON UP testing:
+Bottom-up testing is a specific type of integration testing that tests the lowest components of a code base first.
+ In Bottom Up Integration testing approach different modules are created first then these modules are integrated with the main function.
+
+
+ Regression testing:
+ Regression testing is testing existing software applications to make sure that a change or addition hasn't broken any existing functionality.
+
+ SMOKE TESTING:
+ Smoke testing, also called build verification testing or build acceptance testing, is nonexhaustive software analysis that ascertains
+  that the most crucial functions of a program work but does not delve into finer details. Smoke testing is the preliminary check
+   of the software after a build and before a release.
+
+
+
+
+==> System testing types:
+
+Recovery Testing:  " recovery testing is the activity of testing how well an application is able to recover from crashes, hardware failures and other similar problems."
+Security Testing:  "Security Testing is a type of Software Testing that uncovers vulnerabilities of the system and determines that the data and resources of the system are protected from possible intruders."
+Portability testing: "Portability testing refers to the testing with ease of moving one product or software from one environment to another. "
+Performance Testing: "Performance testing is a non-functional software testing technique that determines how the stability, speed, scalability, and responsiveness of an application holds up under a given workload."
+     Performance subtypes: 
+    -> Load tests help you understand how a system behaves under an expected load.
+    -> Stress tests help you understand the upper limits of a system's capacity using a load beyond the expected maximum.
+
+
+
+==> Black box testing and white box testing:
+
+Black box testing refers to any type of software test that examines an application without knowledge of the internal design, structure, or implementation of the software project.
+White Box Testing is software testing technique in which internal structure, design and coding of software are tested to verify
+ flow of input-output and to improve design, usability and security. In white box testing, code is visible to testers so it is 
+ also called Clear box testing, Open box testing, Transparent box testing, Code-based
+
+
+==> Alpha and Beta testing:
+NOTE: They are subtype of subtype of black box testing.
+Alpha Testing is a type of software testing performed to identify bugs before releasing the product to real users or to the public.
+Alpha Testing is one of the user acceptance testing.
+Beta Testing is performed by real users of the software application in a real environment. Its unstructured.
+
+
+
+==> Stubs And Drivers:
+They are replica of modules...
+Stubs and Drivers are two such elements that play a very crucial role while testing; they replace the modules that haven’t 
+been developed yet but are still needed in the testing of other modules against expected functionality and features. 
+Stub:
+Stubs are used when lower-level of modules are missing or in a partially developed phase, and we want to test the main module.
+
+Driver:
+Drivers are used when higher-level of modules are missing or in a partially developed phase, and we want to test the lower(sub)- module.
+
+==> Software maintainance why?
+For avoiding deterioration of software. With the change of hardware must change software a little bit too.
+NOTE: 20% work only for fixing in maintainance and 80% work for adaptation.
+Types:
+Corrective Maintainance: In this maintainance we fix the problem/bugs.
+Adaptive Maintainance:  Modify the software to make it work better with new enviroment and keep software up to date. 
+Perfective Maintainance: Includes new features according to the user requirement for seeking perfection.
+Preventive Maintainance:  May be some problems our software have in the future. For avoiding that we do maintainance like Prevention is better than cure.
+
+
+==> Software reEngineering:
+
+When software has no proper documentaion and its owner want to change from one lang to other then we use reEngineering.
+Means we do reverse engineering by reversing the SDLC for getting understanding of software and then resturcture it and add forward engineering and then build a re-enginneerd software.
+ -->
