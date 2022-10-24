@@ -84,6 +84,14 @@ TurnAround Time is best when process done within brust time.
 SO General,
 Best Quantum size is in which more processes complete their brust.
 And again we can caluculate the process CPU brust using history and make quantum,
+
+
+For choosing Quantum size:
+1) The context switch latency should not be more than 10 percent of quantum size.
+2) More processes finish their cpu brust within brust.
+
+
+Some OS make the quantum size variable. If the cpu brust is large then it make quantum size according to it and small then also acc to it.
 */
 
 
