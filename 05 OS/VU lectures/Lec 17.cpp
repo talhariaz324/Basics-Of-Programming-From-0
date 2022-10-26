@@ -11,10 +11,10 @@ MultiLevel Queues can be:
 
 Suppose our process is of type interactive editing type so it will place in this queue.
 It will remain in this queue during its lifetime.
-
+Process will enter in its relevant queue acc to its priroty and choose queue of its priority.
 If the process is in the some priority queue, then it will execute that particular again and again.
 For fixing this starvation problem, we can do 2 things:
-1) We can give fix time to each queue like 70% to this queue and 20% to this queue.
+1) We can give fix time to each queue like 70% to this queue and 20% to this queue. (Means Algorithm  scheduler for scheduling queues themeselves) and each queue also has scheduler. 
 2) We can do aging, Mean process moves from queue to queue beacause of its priority.
 
 This second step in which process is moving from 1 queue to other is actually the MultiLevel FeedBack Queue.
@@ -161,12 +161,16 @@ UNIX System V Scheduling Algorithm:
 main memory and ready to run is updated by using the following formula:
 
 Priority# = (Recent CPU Usage) /2 + Threshold.Priority + nice
+      NOTE:  High CPU usage will have higher priority number
 
 nice: Positive value. nice is the number which is given by user. This is for increasing the priority number. 
 User can increase the nice value but decrease at a specific level.
 NOTE: Higher priority number then less priority.
-
+NOTE: Low level routines/ software in kerne will have higher priority than upper level routines
+NOTE: If 2 processes have same priority number and they are in same queue then 1st will run which arrives first. This can be in start and at end.
+NOTE: FCFS and SJF is good for batch systems. Rounds Robin is good for time sharing systems
 */
+
 
 
 
@@ -174,3 +178,4 @@ NOTE: Higher priority number then less priority.
 Example of clock tick, decay and priority:
 45 mint Lec 17.
 */
+
