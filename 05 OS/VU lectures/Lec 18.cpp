@@ -57,3 +57,110 @@ Algorithm Evaluation: Comparing which algorithm is good in particular situations
     Most Expensive Because we have to change algo in kernel again and again and also  for checking by users.
         Good option due to Open source kernels such as linux
 */
+
+
+/*
+Process Synchronization:
+
+Concurrent access to shared data may result in data inconsistency.
+
+Maintaining data consistency requires mechanism to ensure that cooperating
+processes access shared data sequentially.
+*/
+
+
+/*
+Bounded Buffer Problem: 
+We discussed its solution. But at that solution we have to leave 1 space in buffer.
+But now we are also have solution in which we are using full space of buffer.
+
+Solution:
+#define BUFFER_SIZE 10
+tyoedef struct {
+    ...
+} item;
+
+item buffer[BUFFER_SIZE];
+int in = 0; out = 0;
+int counter = 0;
+
+
+We are maintaining a counter for producer and consumer both.
+in is for producer which will increase when produce from buffer.
+out is for consumer which will increase when consume from buffer.
+
+
+Producer code:
+
+item nextProduced;
+while (1){
+    nextProduced= getItem();
+    while(counter == BUFFER_SIZE);
+    buffer[in] = nextProduced;
+    in = (in + 1) % BUFFER_SIZE; // for increasing in variable with cricular buffer.
+    counter++;
+}
+
+
+Consumer Process:
+
+
+item nextConsumed;
+while (1){
+    nextProduced= getItem();
+    while(counter == 0);
+    nextConsumed = buffer[out];
+    out = (out + 1) % BUFFER_SIZE; // for increasing out variable with cricular buffer.
+    counter--;
+}
+*/
+
+
+/*
+Bounded Buffer Problem in assembly:
+PRODUCER:
+In assembly actually, counter is place in register and then register is incremented and then again place in counter.
+CONSUMER:
+In assembly actually, counter is place in register and then register is decremented and then again place in counter.
+
+But what producer and consumer reach at this line of code at the same time. Means Producer increment the value in register but before placing it in counter
+it find interrupt and shifted to consumer. Now consumer will decrement the counter value which is not actual value now. actual value was in register.
+So this is problem that the process which ended in the last. it can be producer and consumer but in both case output is going to wrong.
+
+Race Condition: The situation where several processes access and manipulate shared data concurrently, the
+final value of the data depends on which process finishes last. 
+
+So above condition is race condition.
+*/
+
+
+
+/*
+Critical Section: A piece of code in a cooperating processes in which
+the process may update shared data (variable, file, database).
+
+Critical Section is actually the code which creates problem, so we 
+have to serialize execution of critical sections in cooperating processes.
+
+Critical Section Problem: Making serialize solution for critical solution is problem.
+
+
+
+Solution of critical solution:
+1) Software based solution
+2) Hardware based solution ==> Use CPU instructions to solve.
+3) OS based solution
+
+*/
+
+
+/*
+Structure of Solution
+
+do {
+    entry section
+    critical section
+    exit section
+        reminder section
+}while (1);
+*/
