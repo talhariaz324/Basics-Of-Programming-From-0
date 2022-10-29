@@ -146,7 +146,7 @@ User Level Processes ==> Their Priority can change, They continues to change the
 
 /*
 UNIX System V Scheduling Algorithm:
-
+I/O processes has high priority than CPU processes in it.
 
 => The CPU usage of each process is updated every clock tick by the clock ISR. (interrupt service routine)
         Clock Tick is value which is increase by one at every 1/ powerLine of the process
