@@ -96,6 +96,6 @@ int main ()
 
     }
 
-    Total: n + 1 + n + n +1 + n + n + 2 + 4 = 5n + 8
+    Total: n + 1 + n + n +1 + n + n + 2 + 4 = 5n + 9
     O(n)
 */
