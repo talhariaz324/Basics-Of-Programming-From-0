@@ -10,3 +10,7 @@ Turning point was on the logic in if condition. I also have to put = there also.
  compare and give answer. 
  But maybe sometimes x or y greater than z then for just use abs(z-x) and abs(z-y). This gives -1 to 1 means positive with same magnitude.
 */
+
+/*
+Understand question and then make proper logic and then write code.
+*/
