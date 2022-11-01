@@ -39,7 +39,7 @@ This is sharing but not updating the variables, because if update then it will b
 
 
 
-// Solution of software base of critical section
+// Solution of software base of critical section ======> 2 processes critical section problem
 
 /*
 Algorithm 1
