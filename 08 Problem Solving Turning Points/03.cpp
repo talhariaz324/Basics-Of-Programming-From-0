@@ -14,3 +14,12 @@ Turning point was on the logic in if condition. I also have to put = there also.
 /*
 Understand question and then make proper logic and then write code.
 */
+
+
+/*
+I use nested loop and array of english characters to get number of actual array.
+But he calculates it by using 'a' - 97 // 97 is the value of lower case stating point in ascii. so it will give same number(index) as we 
+required to get number of actual array.
+
+https://youtu.be/oHIwfH4-vdU // Check here sol
+ */
