@@ -23,3 +23,10 @@ required to get number of actual array.
 
 https://youtu.be/oHIwfH4-vdU // Check here sol
  */
+
+
+ /*
+ Here i have given 1 integer as parameter.
+ It will test it by different test cases.
+ So I simply have to consider that the given n value is the value from which i have to get result.
+ */
