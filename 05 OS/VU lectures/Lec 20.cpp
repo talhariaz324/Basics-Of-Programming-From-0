@@ -79,3 +79,81 @@ It satisfy the bounded waitng because if process req then it has to wait single 
 So good solution for 2 processes in critical section.
  
 */
+
+
+/*
+N-Process Critical Section  Problem
+=> Consider a system of n processes (p0,p1,p2.... pn-1)
+
+=> Each process has a segment of code called critical section in which the process may change shared data.
+
+*/
+
+
+/*
+Bakery Algorithm:
+
+bakery Algorithm is the solution of the n-process critical section problem.
+It is by Leslie Lamport
+
+Before entering its critical section,
+process recieves a ticket number.
+Holder of the smallest ticket number
+enters the critical section.
+
+If processes Pi and Pj receive the same number, if i > j, then Pi is served
+first; else Pj is served first. where i and j are the process id numbers.
+
+
+The ticket numbering scheme always generates numbers in the increasing 
+order of enumeration; i.e., 1, 2, 3, 4, 5 ...
+
+
+Notations:
+(ticket #, process id #)
+(a,b < c,d) if a < c OR if a == c and b < d
+Where a is the ticket number and b is the process id. 
+where c is the ticket number and d is the process id.
+
+
+max(a0,....,an-1) gives the larger number in a. or maybe greater. 
+
+
+Data Structures
+=> boolean choosing[n] // each process has slot in this array and set to true by the process before it is choosing number using max function and after choosing to false
+=> int number[n]; // each process has slot in this array and the number which is selected by the process is store in the number array in its own slot.
+These data structures are initialized to false and 0, respectively.
+*/
+
+
+
+/*
+do{
+    choosing[i] = true;
+    number[i] = max(number[0], number[1], ..... number[n-1] + 1); // If largest is 10 then +1 add and store 11 in its slot.
+    choosing[i] = false;
+    Now we are looping through all the process for entering in the critical section.
+    for(j = 0; j < n; j++){
+        while(choosing[j]) ; // Means if the process is in mid of choosing number but still not then null(wait) here.
+        If process choose slot is false
+        while((number[j] != 0) && (number[j],j < number[i],i)); // Here checking ok choosing is false then check that in numbers array its value is 0 or not. if 0 then it means its from start and dont want to enter in critical section and if not zero then mean it want to enter and then we check that no process in process should be larger than my process.
+
+        After this it will enter in critical section.
+
+    }
+        number[i] = 0;
+         remainder section
+}while(1);
+*/
+
+
+/*
+Example:
+If we have the multiple processes then they have to run simultaneously.
+P0 is running in the critical section because of condition as we discussed above.
+Simultaneously, P1 req then in the second while loop in for loop checks other processes.
+So the condition become true and P2 will null(wait).
+Similarly goes for P3, P4.
+When P0 left critical section, it sets i to 0 then condition in second while loop of for loop become false and the process enters critical section.
+We discussed how they enter now in critical section in next lec
+*/
