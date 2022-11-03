@@ -26,6 +26,8 @@ func1 stack ==> 3  // condition true but now before calling it execute its state
 main stack==> x = 3; 
 
 
+NOTE: Stack activation record for each func call is created and store its n value. Before statements are the print statements. so it will print in ascending order
+
 Here n is 3 and activation record is 4, leaving the main activation record
 So formula is n+1 is the call (activation record will be made)
 Degree: O(n)
@@ -61,7 +63,7 @@ func1 stack ==> 2  // condition true but now after returning it execute its rema
 func1 stack ==> 3  // condition true but now after returning it execute its remaining statements here is print 2 and then end
 main stack==> x = 3; 
 
-NOTE: Stack activation record for each func call is created and store its n value. Remaining statements are the print statements.
+NOTE: Stack activation record for each func call is created and store its n value. Remaining statements are the print statements. so it will print in descending order
 
 
 
