@@ -97,4 +97,27 @@ Tracing of recursion is done using tree.
 
 /*
 Conclusion: Recursion is done by forward and then come back.
+This means recursion has 2 phases:
+1) Calling (Ascending)
+2) Returning (Descending)
+
+For Example:
+
+void func1(int n) {
+    if(n > 0){
+    Calling (these statements will execute before the function call)
+    func1(n-1);
+    Returning (these statements will execute after the function call,, because after so that's why starts from last function part)
+    }
+}
+
+int main(){
+    int x = 3;
+    func1(x);
+}
+
+
+loop and recursion difference;
+loop is repeat but loop is only ascending order
+recursion is repeat but recursion is descending order.
 */
