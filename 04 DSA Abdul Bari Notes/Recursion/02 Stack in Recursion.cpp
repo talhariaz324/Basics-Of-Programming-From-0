@@ -20,8 +20,9 @@ Also has heap.
 Now discuss stack
         Stack has main and other function activation record.
 func1 stack ==> 0  // condition false so end by calling its parent.
-func1 stack ==> 1  
-func1 stack ==> 2
+func1 stack ==> 1  // condition true but now before calling it execute its statements. here is print 1 and then call
+func1 stack ==> 2  // condition true but now before calling it execute its statements. here is print 2 and then call
+func1 stack ==> 3  // condition true but now before calling it execute its statements. here is print 3 and then call
 main stack==> x = 3; 
 
 
@@ -55,9 +56,12 @@ Also has heap.
 Now discuss stack
         Stack has main and other function activation record.
 func1 stack ==> 0  // condition false so end by calling its parent.
-func1 stack ==> 1  // condition true but now after returning it execute its remaining statements. here is 1 and then end
-func1 stack ==> 2  // condition true but now after returning it execute its remaining statements here is 2 and then end
-main stack==> x = 3;  // condition true but now after returning it execute its remaining statements here is 3 and then end
+func1 stack ==> 1  // condition true but now after returning it execute its remaining statements. here is print 1 and then end
+func1 stack ==> 2  // condition true but now after returning it execute its remaining statements here is print 2 and then end
+func1 stack ==> 3  // condition true but now after returning it execute its remaining statements here is print 2 and then end
+main stack==> x = 3; 
+
+NOTE: Stack activation record for each func call is created and store its n value. Remaining statements are the print statements.
 
 
 
