@@ -25,7 +25,7 @@ func1 stack ==> 2
 main stack==> x = 3; 
 
 
-Here n is 3 and activation record is 4
+Here n is 3 and activation record is 4, leaving the main activation record
 So formula is n+1 is the call (activation record will be made)
 Degree: O(n)
 
@@ -61,7 +61,7 @@ main stack==> x = 3;  // condition true but now after returning it execute its r
 
 
 
-Here n is 3 and activation record is 4
+Here n is 3 and activation record is 4, leaving the main activation record
 So formula is n+1 is the call (activation record will be made)
 Degree: O(n)
 
