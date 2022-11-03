@@ -151,9 +151,42 @@ do{
 Example:
 If we have the multiple processes then they have to run simultaneously.
 P0 is running in the critical section because of condition as we discussed above.
-Simultaneously, P1 req then in the second while loop in for loop checks other processes.
+Simultaneously,P1 value is 0 so not interested, P2 req then in the second while loop in for loop checks other processes.
 So the condition become true and P2 will null(wait).
 Similarly goes for P3, P4.
 When P0 left critical section, it sets i to 0 then condition in second while loop of for loop become false and the process enters critical section.
-We discussed how they enter now in critical section in next lec
+*/
+
+
+/*
+Example:
+Process     Number (choosen for critical section)
+
+p0             3
+p1             0
+p2             7
+p3             4
+p4             8
+
+
+Process with number 0 means it dont want to enter in its critical section.
+
+SO,,,
+P0 number is 3
+it checks second while loop inside the for loop.
+If it finds that some other process has its value smaller than it then it will null(wait for it to complete) and the wait will over when condition become false and the condition become false when previous process after exiting critical section make its number = 0
+so p0 check for all other processes.
+It finds no process value is smaller than it.
+So p0 runs its critical section.
+Simultaneously, other processes will wait to complete p0. at their while loop condition p0 is the process which is smaller than them.
+When p0 exits.
+Conditions of all other processes finds no process smaller than them so they increment j and check.
+All processes will do: p1 is number = 0 so j again increments
+at that time p3 enters in critical section and other now wait.
+then p2 enters in critical section
+and then p4.
+
+Acc to our assumptions numbers of processes.
+Check table at Lec 21 : 13:43
+
 */
