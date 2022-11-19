@@ -190,3 +190,15 @@ Acc to our assumptions numbers of processes.
 Check table at Lec 21 : 13:43
 
 */
+
+
+/*
+Is that process fulfill 3 parts of good solution?
+Mutual Exclusion:
+ (number[j] != 0) && (number[j],j < number[i],i) cannot be true for 2 processes.
+Bounded-Waiting: 
+One entry of process in critical section and then get bigger number to get enter in critical section again. First come first serve.
+Progress:
+Decision for entering in critical section is finite time.
+Remainder section will not get involve in decision.
+*/
