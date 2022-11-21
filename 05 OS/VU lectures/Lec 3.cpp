@@ -85,6 +85,7 @@ Dispatch Table: contains pointers of particular code of system call.
 
 
 Kernel indexes the dispatch table , which contains pointers to service routines for system calls .
+The system-call service routine is a part of the operating system. The kernel examines the interrupting instruction to determine what system call has occurred; a parameter indicates what type of service the user program is requesting. 
 Service routine is executed and return parameter or error code placed at wellknown places ( usually a CPU register ) .
 Control given back to user program .
 Library function executes the instruction following trap .
