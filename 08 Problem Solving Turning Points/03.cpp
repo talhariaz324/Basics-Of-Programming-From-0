@@ -30,3 +30,21 @@ https://youtu.be/oHIwfH4-vdU // Check here sol
  It will test it by different test cases.
  So I simply have to consider that the given n value is the value from which i have to get result.
  */
+
+
+/*
+turning is that if we take number mod with some number to whom we want to check result would be whole or not.
+IF AFter mod its answer become 0 then it will be whole else not,
+
+Reverse number formula:
+while (number > 0) {
+        result1 = result1 * 10 + number % 10;
+        number /= 10;
+    }
+
+    abs give positive number
+    ceil give high of particular point number
+    floor give low of particular point number
+
+
+*/
