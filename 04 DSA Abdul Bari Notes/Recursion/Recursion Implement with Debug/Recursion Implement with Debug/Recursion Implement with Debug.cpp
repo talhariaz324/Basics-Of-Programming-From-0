@@ -22,6 +22,9 @@ int main() {
 
 // Static Varibale in recursion
 
+
+/*
+
 #include <stdio.h>
 int fun(int n)
 {
@@ -41,5 +44,24 @@ int main() {
     r = fun(5);
     printf("%d\n", r);
 
+    return 0;
+
+}
+*/
+
+
+//Tree Recursion
+#include <stdio.h>
+void fun(int n)
+{
+    if (n > 0)
+    {
+        printf("%d ", n);
+        fun(n - 1);
+        fun(n - 1);
+    }
+}
+int main() {
+    fun(3);
     return 0;
 }
