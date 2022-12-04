@@ -48,3 +48,9 @@ while (number > 0) {
 
 
 */
+
+
+/*
+Important key point:
+Just make logic and check video solution.
+*/
