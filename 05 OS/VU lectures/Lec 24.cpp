@@ -107,6 +107,7 @@ Multiple readers can read but only 1 write can use the shared resource.
 2) Second Readers and writers Problem
 
 First Readers and Writers Problem:
+If a reader is ready, it waits for the minimum amount of time.
 No reader will be kept waiting unless a writer has already obtained
 permission to use the shared object.
 
@@ -167,20 +168,16 @@ Each philosopher thinks. When he becomes hungry, he sits down and picks up the
 After a philosopher finishes eating, he puts down the chopsticks and stat to think.
 
 
-Philosophers problem is that they pick right chopsticks first and then left.
-When they sit, they pick right chopsticks but there is now no chopstick available at their 
-left side because chopsstick are only 5. So this is problem
+Diagram:
 
-They are sitting:
-
-
+            1                      2
     Think for a while -----> Pick up chopsticks
         ^                              ^
         .                              .
         .                              .
         .                              .
     Put down the chopstick <------ Exit for a while
-
+            4                          3
 
 Shared data: semaphore chopsticks[5];
 initialized to 1
