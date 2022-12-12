@@ -8,8 +8,8 @@ state and then recover.
 deadlocks never occur in the system.
 
 3 Methods:
-1) Deadlock Prevention
-2) Deadlock Avoidance
+1) Deadlock Prevention (Explicit Violating the 1 of the 5 conditions)
+2) Deadlock Avoidance (tell the resources which process may have during its life)
 3) Deadlock detection and recovery
 */
 

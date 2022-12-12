@@ -40,3 +40,34 @@ we take the static variables for both.
     }
  }
 */
+
+
+/*
+Let's reduce the number of multiplication for taylor's series:
+ e^x = 1  + x/1 + x^2/2! +  x^3/3! +  x^4/4! ... + x^n/n!
+ So we can make it reduce by common:
+    1 + x/1 [1+x/2+x^2/2*3+x^3/2*3*4
+    1 + x/1 [1+x/2[1+x/3+x^2/3*4]
+    1 + x/1 [1+x/2[1+x/3[1+x/4]]]
+  So, from this last equation we can make formula:
+  start from right because bracket.
+  so sequence is:
+      1* x/4 + 1 then its result * x/3 + 1 then its result * x/2 + 1
+      So,
+                 1+x/n*S where S is initially is 1
+    Taylor Series Horner’s Rule 
+double e(int x, int n)
+{
+ static double s;
+ if(n==0)
+ return s;
+ s=1+x*s/n;
+ return e(x,n-1);
+ 
+}
+int main()
+{
+ printf("%lf \n",e(2,10));
+ return 0;
+
+*/
