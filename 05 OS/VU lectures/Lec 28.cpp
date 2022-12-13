@@ -31,7 +31,7 @@ So this is single type resource allocation.
 
 /*
 For Multi Type Resource Allocation we use the most famous alogorithm
-which is Banker's Algorithm
+which is Banker's Algorithm (known as banker because its working like banks, banks take check on each transection like here we are doing in this algo)
 Banker's Algorithm:
 Multiple instances of resources.
 Each process must a priori claim maximum use. (Tell max use of resources)
