@@ -44,4 +44,8 @@ void TOH(int n, int A, int B, int C){
 }
 
 Time O(2^n)
+
+This function will give sets:
+Like for 1 disk:
+(1,3) means shift from A tower to C tower where A B C tower has number 1 2 3 respectively.
 */
