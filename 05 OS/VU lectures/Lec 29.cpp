@@ -106,7 +106,7 @@ Is the process interactive or batch
 /*
 Resource Preemption:
 Step 1:
-Selecting a victim -- minimize cost
+Selecting a victim for taking its all resources and give to other process -- minimize cost
 Step 2:
 RollBack -- return to some safe state, restart process from that state.
 Step 3:
