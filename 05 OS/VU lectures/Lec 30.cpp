@@ -124,6 +124,11 @@ Dynamic Linking: In dynamic linking, linking is postponed until runtime.
 A library call is replaced by a piece of code, called stub, which is 
 used to locate memory-resident library routine at runtime.
 
+During execution of a process, stub is replaced by the address of the relevant
+library code and the code is executed.
+
+If library code is not in memory then it is loaded at this time.
+
 Advantages:
 Potentially less time needed to load a program
 Potentially less memory space needed
@@ -135,5 +140,5 @@ Time-consuming run-time activity, resulting in slower program execution.
 
 gcc compiler:
 Dynamic linking by default
-static option allows static linking
+static option allows static linking by using "-static"
 */
