@@ -1,5 +1,7 @@
 /*
 Overlays:
+
+-> Contiguos in memory
 Overlays give the concept of virtual memory.
 -> Allow a process to be larger than the amount of 
 memory allocated to it.

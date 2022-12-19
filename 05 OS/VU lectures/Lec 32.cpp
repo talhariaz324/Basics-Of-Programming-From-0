@@ -89,3 +89,14 @@ page 3                 3........7         3.......... page 2
                                         // 5
                                         // 6
                                         // 7 ......... page3
+
+
+/*Detail Example is at 23:05 in lec 33. 
+How many bits required to address some number?
+ceiling[log base 2 and the number] for which you want to check the how many bits
+
+See Example now.
+*/
+
+
+/*NOTE: Page table are handle in hardware. If we do in software then it will get slow.*/
