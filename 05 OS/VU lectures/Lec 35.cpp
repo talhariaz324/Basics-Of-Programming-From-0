@@ -46,6 +46,7 @@ Segment-table length register (STLR) indicates number of segments used by a prog
 Segment number s is legal if s < STLR
 else illegal and then trap.
 
+Hardware support:
 CPU ->(check s is legal or not. and check offset is within limit or not) s,d -> segment table (limit, base) -> d + base -> physical address
 */
 
@@ -74,10 +75,17 @@ purpose with each entry in segment table:
     -> Read, write, execute bits
 Same as in page table when accessing segment in segment table which is not available or 
 doing execution of segment which is readable.
+
+When need?
+Suppose CPU allows to read at most 16 segments to read by each process.
+Then if small process come and it has only 5 segments, then remaining 11 space
+is free in segment table, so when process try to access these segments which are
+not part of the process so we make them invalid.
+So whenever this case so due to this invalid process will generate trap and give error.
 */
 
 /*
-Example: 40 mint 
+Example: 40 mint
 */
 
 /*

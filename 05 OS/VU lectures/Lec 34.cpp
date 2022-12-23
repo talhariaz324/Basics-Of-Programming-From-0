@@ -128,6 +128,6 @@ inverted page table.
 
 Examples: 64-bit UltraSPARC and PowerPC
 
-MORE details: 
+MORE details (Hardware Support): 
 CPU -> logical address (pid, p, d) -> search pid and p -> on find get frame number which is index -> append index with d -> physical address (physical memory)
 */
