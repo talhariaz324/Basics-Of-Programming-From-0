@@ -81,4 +81,19 @@ Page size = 4KB
 1) Real Mode:
  20- bit physical address is obtained by shifting left the selector value 
  by four bits and adding to it the 16 bit effective address
+
+2) Protected Mode:
+  2^48 bytes -> virtual address space
+  2^32 bytes -> linear address space (Actually this is segment space and it tell the linear address which is here 32 which tell offset would be 32 bits)
+  Max segment size = 4GB because 2^32
+  Max segments per process  = 16K because as above we discuss 16 bit selector in which 13 bit is s and 1 bit is local global so total 14 and 2^14 = 16 K
+  Six CPU registers allow access to six segments at a time.
+
+Selector is used to index a segment descriptor table to obtain an 8 byte
+segment descriptor entry. Which gives base address and offset are added
+to get a 32 bit linear address, which is partitioned into p1, p2 and d
+for supporting 2 level paging.
+
+CPU support: 
+logical address -> selector get into descriptor table and give base address -> append with offset -> gives p1(directory), p2(page), offset so whole is linear address -> p1(directory) use to index into inner table(page directory) -> which leads to page table and give frame number -> append frame number and offset of linear address = physical address
 */
