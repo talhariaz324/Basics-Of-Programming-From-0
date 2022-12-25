@@ -75,11 +75,11 @@ Problems with restarting instructions that cause page faults:
     -> Auto increment/ decrement location
        ++ and -- can cause so we can make copy
     -> Block move => string move means string is in memory which is src which is to shift at dest and they are in same page. If src are overlapping with dest then can't restart. 
-    What is overlapping? For Example, we shift 1 src to dest and the src and dest get overlap and the 2nd src is not in memory and it would cause page fault. So problem.
+    What is overlapping? For Example, we shift 1 src to dest and the src and dest get overlap and the 2nd src is not in memory and it would cause page fault. So when restart our src would not be same. Thats problem
 
     Solution: 1- copy (done can be with micro code)
               2- For every string move do copy
-              2- Here we can also check that if they are overlapping then stop.
+              2- Here we can also check at micro code level that if they are overlapping then stop.
 
 
 Performance of demand paging:
@@ -112,4 +112,18 @@ T effective = (1 - p) * 100 + p (25 milli)
             = 100 + 24999900*p
 If one access out of 1000 causes a page fault, effective access time is
 25 microseconds (high MAT when page fault come), a slowdown by a factor of 250.
+
+
+Example:
+If we want less than 10 percentage degradation in effective memory access
+time then we have the following inequality ==> Means If we say that max we can
+bear 10 percent of MAT more because of page fault.
+
+Using previous values:
+110 > 100 + 25000000 * p
+10 > 25000000 * p
+p < 0.0000006 where p is page fault (which is small)
+
+This (if we allow 10%) means we can allow only 1 page fault every  2.500,000 (2.5M) memory references.
+
 */
