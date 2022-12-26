@@ -7,7 +7,6 @@ we swap out it and swap in our new page.
     -> Replacement algorithm (minimize number of page faults)
     -> Performance with replacement 
     -> Victim selection
-        -> Criteria
         -> Local vs global
 */
 
