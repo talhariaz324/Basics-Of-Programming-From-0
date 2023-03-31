@@ -1,0 +1,34 @@
+OSI model: The purpose of the OSI model is to facilitate the communication
+between differnet systems without requiring changes to the logic of the
+underlying hardware and software.
+
+
+Layering: Layering means decomposing the problem of building a network into
+more manageable components (Layers).
+
+    - More modular design amd easy to troubleshoot.
+
+Layers in the OSI model:
+    - Application Layer
+    - Presentaion Layer
+    - Session Layer
+    - Transport Layer
+    - Network Layer
+    - Data Link Layer
+    - Physical Layer
+
+Router: is parse the data and have a look on the ip of sender and receiver. So sends the data to the particular node.
+Router Layers: 
+    - Network Layer (This layer parse sender and receiver)
+    - Data Link Layer
+    - Physical Layer
+
+ Sender                                                                                  Receiver
+    ------------------------------------------- Router ------------- Router ----------------          
+Application (prepare the data to be send)                                         At here same layers but            
+Presentaion                                                                       from physical to application
+Session
+Transport (important)
+Network                                        
+Data
+Physical                                                                        

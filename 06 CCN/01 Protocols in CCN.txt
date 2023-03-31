@@ -1,0 +1,72 @@
+/*
+What is data communication?
+Data communication is the transmission of the data between two node throgth some medium.
+
+Data Flow:
+1- Simplex (Sender only sends data to receiver)
+2- Half Duplex (Sender and receiver both sends and receives data but not at the same time.
+3- Full Duplex (Sender and receiver both sends and receives data`simultaneously.
+
+What is Protocol?
+When transmitting data from one node to another, Then it may occur
+that sender is fast then the receiver and receiver unable to receive all the data.
+
+So here came the protocols.
+
+Protocols are the rules that governs the data communication.
+Protocol take care of:
+What is to be communicated
+how is to be communicated
+When is to be communicated
+
+
+It has elements which ensure the data communication which includes:
+
+Message Encoding: Encode the message into signal or waves to transfer the data wirely or wirelessly respectively.
+        Message Source => Encoder => Transmiiter => Transmission medium => Reciever => Decoder => Message Destination
+ -> If the message is sends to wireless then data converts into waves but the next router if connected with wire then data again encode into the signal
+
+Message Formatting and encapsulation: we not only just send the data, Then would we know that who is sender and reciever. So
+We format the data which is known by both sender and reciever that ensures the correct receiver as well.
+
+
+Message Size: The medium through which data is transmitting have some size(bandwidth) to transfer data. So
+we do not send the whole data, instead we send the small chunks.
+    -> If large file than the capacity of the link then converts it into the segment and each segment is numbered sequentially.
+        so that reveiver can easily reassemble the data. If any missing segment then we can do know by the sequential number of that segment
+Message Timing: Data should be send timely. If not then sender keeps on sending and maybe receiver do not receive data
+So, We follow:
+    Flow control: Sender sends data and waits for the acknowledgement from the receiver that he received the data. And then sender sends the next packet.
+    Response Timeout: If sender do not receive ack within time (set by protocol) then shows the error response timeout.
+
+Message Delivery Options:
+    Unicast -> Send to one node in the network
+    Multicast -> Send to more than one node in the network but not all.
+    Broadcast -> Send to all nodes in the network
+
+
+
+
+
+*/
+
+
+
+/*
+Peer to Peer Network:
+No Centrailized Administrator
+All peers are equal rights
+simple sharing application
+not scalable because node may have only 2 ports.
+
+
+
+
+Client server Network:
+- Centrailized Administrator (server)
+- all other nodes are childs
+- request response model
+- scalable because connection to centralized server
+- Server may be overloaded because every node requesting to it and may  be the same time.
+
+*/

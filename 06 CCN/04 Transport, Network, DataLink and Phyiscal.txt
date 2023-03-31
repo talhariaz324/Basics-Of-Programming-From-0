@@ -1,0 +1,70 @@
+Packets: Packets are units of data that are used in the network layer of the protocol stack. They are composed of a header and a payload, where the header contains information such as the source and destination IP addresses, and the payload contains the actual data being transmitted. Packets are routed through the network based on the destination IP address.
+
+Frames: Frames are units of data that are used in the data link layer of the protocol stack. They are composed of a header and a payload, where the header contains information such as the source and destination MAC addresses, and the payload contains the packet from the network layer. Frames are used to transmit data between devices on the same physical network.
+
+Segments: Segments are units of data that are used in the transport layer of the protocol stack. They are composed of a header and a payload, where the header contains information such as the source and destination port numbers, and the payload contains the data from the application layer. Segments are used to establish and manage connections between applications running on different devices.
+
+
+
+Transport Layer: It is responsible for process to process delivery of the
+entire message.
+        Node to node communication is actually 2 processes communication.
+
+Services:
+        Port Addrssing: OS gives pid to each process. When process request to
+        network then it gives the port to that process. When  sender send data
+        then it receive by the respective reciever process beacause of port number.
+        When receiver replies then receive by the respective process at the sender side
+        because of port.
+
+        Segmentation and Reassembly: Dividing the data into smaller pieces called
+        Segmentation and receiver reassemble the data when all pieces received.
+
+        Connection Control: Two types:
+            - Connection Oriented --Data send when connection established
+            - Connectionless -- Just data send without connection.
+        
+        End to End flow control:
+            whatever sender sends, receiver receives without any loss.
+        
+        Error Control: Require to check any error in transmission
+
+
+
+    Netweork Layer: It is responsible for delivery of data from the original source 
+    to the destination network with logical addressing(IP)  and routing (choosing best route)
+        Services:
+            - Logical Addressing (Have IP of sender and receiver,,, router get help to which node this data belong to.)
+            - Routing (Based on the IP, router identify the receiver and see which route would be best )
+
+
+    Data Link Layer: It is responsible for moving frames from one node to another node.
+    Frame has header for mac address of sender and receiver(not actual node mac but the router mac because we move step by step) and here we have trailer for error handling
+    Services:
+        - Framing
+        - Physical Addressing (Mac Address sender and receiver)
+        - Flow Control
+        - Error Control 
+        - Access Control (If there is common link between the 2 or more nodes. Then we have to determine which node is active (control) on a common link. So this is done by access control. )
+                - To prevent collisions
+
+
+    Physical Layer: It is responsible for converting data into bits and transmiting bits over a medium. It also provides electrical and mechnical specifications
+    Services:
+        Physical characteristics of the media (wired-- signals (fiber optic--light signal and ethernet --electrical signal) or wireless --waves)
+        Representation of bits (encoding --how zeros and ones converted  into signal)
+        Data rate  (no of bits send each second)
+        Synchronization of bits (clock b/w sender and receiver must be synchronized)
+        Do Line configuration
+            Point-to-Point Configuration: In this configuration, two devices are directly connected to each other using a communication line. The communication line is dedicated to these two devices and no other device can use it. This configuration is commonly used in telephone lines.
+
+            Multipoint Configuration: In this configuration, multiple devices are connected to a single communication line, and all devices share the same communication line to transmit and receive data. 
+
+        Physical topology: How nodes are connected to make a network
+
+        Transmission mode: Simple duplex, Half Duplex, Full duplex
+
+
+
+
+    See working at https://youtu.be/XI8kMBMMS6o?t=362 (6:02 to 9:00 only 3mints)

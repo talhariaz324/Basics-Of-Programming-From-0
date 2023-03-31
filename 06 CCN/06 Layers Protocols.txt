@@ -1,0 +1,44 @@
+ Application Layer Protocols Include: 
+    DNS, BOOTP, DHCP, SMTP, POP, IMAP, FTP, TFTP, HTTP
+
+
+DNS (Domain Name System): DNS is a protocol used to resolve domain names into IP addresses. It is the system that translates human-readable domain names, like www.example.com, into IP addresses, like 192.0.2.1, that computers use to communicate with each other on the Internet.
+
+BOOTP (Bootstrap Protocol): BOOTP is a protocol used to assign IP addresses to network devices during the boot process. It is typically used by diskless workstations to obtain an IP address and other network configuration information.
+
+   a "diskless workstation" refers to a computer system that does not have a hard drive or other local storage. Instead, these systems rely on network-based storage to provide access to operating systems, applications, and data.
+
+DHCP (Dynamic Host Configuration Protocol): DHCP is a protocol used to dynamically assign IP addresses to network devices. It is used to simplify the process of configuring network devices, as it automatically provides the necessary configuration information, such as IP addresses, subnet masks, and default gateways.
+
+SMTP (Simple Mail Transfer Protocol): SMTP is a protocol used to send email messages between servers. It is the most commonly used protocol for email transmission on the Internet.
+
+POP (Post Office Protocol): POP is a protocol used to retrieve email messages from a server. It is typically used by email clients to download email messages to a local computer.
+
+IMAP (Internet Message Access Protocol): IMAP is a protocol used to retrieve email messages from a server. It is similar to POP, but it allows users to keep messages on the server and access them from multiple devices.
+
+FTP (File Transfer Protocol): FTP is a protocol used to transfer files between computers on a network. It is commonly used to transfer files between a client computer and a server.
+
+TFTP (Trivial File Transfer Protocol): TFTP is a simpler version of FTP used for transferring files between network devices. It is typically used for booting diskless workstations and for firmware updates on network devices. 
+   TFTP is commonly used in situations where a small, simple file transfer protocol is needed, such as in network boot processes for diskless workstations or for updating firmware on network devices. 
+   Firmware is software that is embedded in a hardware device, such as a computer motherboard, network router, or smart phone, to provide low-level control of its functions. Firmware is typically stored in non-volatile memory, such as ROM or flash memory, and is designed to be retained even when power is turned off.
+   Firmware performs essential functions in a hardware device, such as controlling the device's boot process, managing its hardware interfaces, and providing low-level access to device-specific features and resources
+
+HTTP (Hypertext Transfer Protocol): HTTP is a protocol used to transfer data over the World Wide Web. It is the protocol used by web browsers to request and receive web pages from web servers. These data is actually the hyper text pages. So WWW interlinked with the hyper text pages which are build with HTML.
+And these pages are available over the network.
+
+
+
+                                                   Transport Layer Protocols Include:  UDP, TCP
+
+     
+UDP (User Datagram Protocol) is a connectionless protocol that provides a lightweight mechanism for sending datagrams (or packets) between networked devices. UDP is often used for real-time applications, such as video or audio streaming, where speed and low latency are critical. Unlike TCP, UDP does not provide reliability or error correction mechanisms, and packets may be lost or delivered out of order. However, this also means that UDP can be faster and more efficient than TCP in certain situations.
+            Connectionless mean that sender sends packets to the receiver without knowing he is active or not.
+            Misconception: was that sender dont know the receiver and sends in the air. Because it is connectionless. But I was wrong.
+
+
+TCP (Transmission Control Protocol) is a connection-oriented protocol that provides reliable, ordered, and error-checked delivery of data between networked devices. TCP is often used for applications that require reliable and accurate transmission of data, such as file transfers, email, and web browsing. TCP establishes a virtual connection between devices and uses a system of acknowledgments and retransmissions to ensure that data is reliably delivered and received in the correct order. TCP is generally slower and more complex than UDP, but it is also more reliable and offers better error detection and recovery mechanisms.  
+
+         TCP/IP is that's why called because we use TCP protocol in Transport layer and we use IP protocol in network layer.
+
+
+ 

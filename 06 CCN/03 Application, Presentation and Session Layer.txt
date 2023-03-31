@@ -1,0 +1,32 @@
+Application Layer: It enables the user to access the network resources.
+-- This is the application through which data would be generated and send to other node.
+
+Services:
+1- File Transfer and Access Management (FTAM) -- may send and receive
+2- Mail Services -- mail send and receives
+3- Directory Services -- Provides access of the data globally.
+
+For Example: I Have to send the password to the other node. Then I open the whatsapp (app), write the password and send. Here maybe i upload some file to send.
+
+
+Presentation Layer: It is concerned with the syntax(format)  and semantics(meaning of that format. Means what first 8 bits represent) of the 
+information exchanged between two systems.
+
+Services:
+1- Translation -- Converting the information into common format that is understandable by sender and receivers as well.
+2- Encryption -- Make the information unreadable by changing its format etc so that nobody except reciever ( by decrypt) can read this information.
+3- Compression --  Reducing the number of bits of info to send
+
+For Example Continue: Password is transfer to common format, encrypted and compressed. So maybe password is qwerty and now skfduawjsh
+
+
+
+Session Layer: It establishes, maintains and synchronizes the interaction among
+communicating devices.
+
+Services:
+1- Dialog control -- Sending means two processes are going to communicate so this layer enables the dialog among 2 nodes
+2- synchronization -- And also sync the sending and receiving. For example you have data of 2000 lines. So make checkpoint at every 100 lines
+that this data send or not. If not then resend.
+
+

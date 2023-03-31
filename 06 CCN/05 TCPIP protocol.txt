@@ -1,0 +1,53 @@
+TCP/IP model is the implementation of the OSI model.
+OSI model was the concept and TCP/IP model is implementation.
+
+TCP/IP model has 4 layers or some say 5 layers (breaking network layer into data link and physical layer) but we go with 4
+
+1- Application Layer
+2- Transport Layer
+3- Internet
+4- Network Access
+
+
+In each layer include multiple protocols that we will discuss later. But for now lets discuss what each layer do
+
+
+1- Application Layer 
+    Combination of the OSI application, presentation and session layer.
+    Represents data to the user, plus encoding and dialog control
+    
+
+    Protocols Include: DNS, BOOTP, DHCP, SMTP, POP, IMAP, FTP, TFTP, HTTP
+
+2- Transport Layer
+    Process to Process communication
+    Support communication b/w diverse devices across diverse networks
+
+
+Protocols Include:  UDP, TCP
+
+3- Internet
+
+    Determines the best path throgth the network
+
+
+Protocols Include: NAT, ARP, ICMP, RIP, OSPF, EIGRP, BGP
+
+
+
+4- Network Access
+    Controls the hardware devices and media that make uo the network
+    Means physical, and the network and data link layer actually media for which network established
+
+    Protocols Include: PPP, Ethernet, Interface drivers
+
+
+    Protocol Data Unit: are named according to the protocols of the TCP/IP suite:
+        Application Layer -- data
+        Transport Layer -- Segment
+        Network  -- Packet
+        Data Link -- Frame
+        Physical -- bits
+
+
+    For Example:  https://youtu.be/wvPe4Zb0tUA?t=462      2 mint
