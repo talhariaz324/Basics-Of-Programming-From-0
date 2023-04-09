@@ -13,9 +13,11 @@ entire message.
 Services:
         Port Addrssing: OS gives pid to each process. When process request to
         network then it gives the port to that process. When  sender send data
-        then it receive by the respective reciever process beacause of port number.
+        then it receive by the respective reciever process (application) beacause of port number.
         When receiver replies then receive by the respective process at the sender side
         because of port.
+
+        IP for which computer and port is for which process/Application requested or to respond
 
         Segmentation and Reassembly: Dividing the data into smaller pieces called
         Segmentation and receiver reassemble the data when all pieces received.

@@ -50,7 +50,11 @@ TCP (Transmission Control Protocol) is a connection-oriented protocol that provi
 
 
 
-Network Address Translation (NAT): NAT allows devices on a private network to communicate with devices on the Internet by translating private IP addresses to public IP addresses. This helps in conserving IPv4 address space and provides a way for devices with private IP addresses to access the Internet.
+Network Address Translation (NAT): 
+ON SEND:
+When device req to router then it has private IP address and random PORT number. BUT router change with public IP address and PORT number and req to ISP's.
+ON BACK:
+When a response comes from the server, Network Address Translation (NAT) is responsible for translating the server's IP address and port number to the appropriate private IP address and port number of the device within the local network. 
 
 
 
