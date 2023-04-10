@@ -2,14 +2,14 @@ Packets: Packets are units of data that are used in the network layer of the pro
 
 Frames: Frames are units of data that are used in the data link layer of the protocol stack. They are composed of a header and a payload, where the header contains information such as the source and destination MAC addresses, and the payload contains the packet from the network layer. Frames are used to transmit data between devices on the same physical network.
 
-Segments: Segments are units of data that are used in the transport layer of the protocol stack. They are composed of a header and a payload, where the header contains information such as the source and destination port numbers, and the payload contains the data from the application layer. Segments are used to establish and manage connections between applications running on different devices.
+Segments: Segments are units of data that are used in the transport layer of the protocol stack. They are composed of a header and a payload, where the header contains information such as the source and destination port numbers and the seqquence number to reassemble the data at receiver side, and the payload contains the data from the application layer. Segments are used to establish and manage connections between applications running on different devices.
 
 
 
 Transport Layer: It is responsible for process to process delivery of the
 entire message.
         Node to node communication is actually 2 processes communication.
-
+-- is responsible for end-to-end communication between applications or processes running on different devices. 
 Services:
         Port Addrssing: OS gives pid to each process. When process request to
         network then it gives the port to that process. When  sender send data

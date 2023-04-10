@@ -13,7 +13,7 @@ Presentation Layer: It is concerned with the syntax(format)  and semantics(meani
 information exchanged between two systems.
 
 Services:
-1- Translation -- Converting the information into common format that is understandable by sender and receivers as well.
+1- Translation -- Converting the information into common format that is understandable by sender and receivers as well like in bits.
 2- Encryption -- Make the information unreadable by changing its format etc so that nobody except reciever ( by decrypt) can read this information.
 3- Compression --  Reducing the number of bits of info to send
 
@@ -23,6 +23,7 @@ For Example Continue: Password is transfer to common format, encrypted and compr
 
 Session Layer: It establishes, maintains and synchronizes the interaction among
 communicating devices.
+ --- Establish a seesion between devices
 
 Services:
 1- Dialog control -- Sending means two processes are going to communicate so this layer enables the dialog among 2 nodes

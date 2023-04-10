@@ -88,3 +88,27 @@ Border Gateway Protocol (BGP): BGP is an exterior gateway routing protocol used 
     Autonomous systems (ASes) refer to collections of IP networks and routers under the control of a single organization or entity that has a common routing policy. An autonomous system is typically assigned a unique Autonomous System Number (ASN) by the Internet Assigned Numbers Authority (IANA) to uniquely identify it on the Internet.
 
    Border Gateway Protocol (BGP) is used to exchange routing information between autonomous systems (ASes) in large-scale networks, such as the Internet. BGP determines the best path for data based on policies defined by network administrators in each AS. BGP allows autonomous systems to make independent routing decisions based on their own policies, which may include factors such as preferred paths, load balancing, and policy-based routing. BGP plays a critical role in interconnecting different autonomous systems on the Internet and ensuring efficient and reliable routing of data between them.                             
+
+
+
+                                          NETWORK ACCESS protocols include: PPP, Ethernet, Interface drivers
+
+
+PPP: PPP stands for Point-to-Point Protocol, and it is a data link layer protocol used in computer networks for establishing a direct connection between two nodes or devices over a serial communication (transfer of one bit at a time) link. It is typically used in situations where a point-to-point link needs to be established, such as connecting a computer to the Internet via a modem.
+
+   Example: Real-time example: When you use a dial-up modem to connect to the internet, PPP is used to establish the connection between your computer (PPP client) and your Internet Service Provider's (ISP) modem (PPP server). PPP frames are used to encapsulate the data transmitted over the connection, ensuring its reliable and secure transmission. Also provide services for the transmission of data.
+
+WHY PPP even we have session layer (for session establishing) and transport layer (for transmission)?
+While session and transport layer protocols handle many aspects of data transmission, PPP serves a specific purpose in establishing and maintaining point-to-point connections, providing additional functionalities such as connection establishment, data encapsulation, link quality and error detection, and network address assignment, which may be required in certain network scenarios.
+
+
+Ethernet: Ethernet is a widely used data link protocol that operates at the Network Access layer of the TCP/IP stack. It provides a way to transmit data over a local area network (LAN) using a set of rules for handling data frames, including addressing, collision detection, and error correction. Ethernet is used in wired networks and supports various data rates, such as 10 Mbps, 100 Mbps, 1 Gbps, 10 Gbps, and beyond.
+Real-time example: In a corporate office, Ethernet may be used to connect computers, printers, and other devices in a local network. When a user sends a file from one computer to another, Ethernet frames are used to encapsulate the data and transmit it over the Ethernet LAN to the destination device.
+
+
+Interface drivers, also known as network interface controllers (NICs) or network interface cards, are hardware devices that provide the physical connection between a computer or a device and the network medium. Interface drivers translate data between the computer's internal data format and the format required by the network medium, such as electrical signals for Ethernet or modulated signals for a telephone line.
+Real-time example: When you connect your computer to a wired Ethernet network using an Ethernet cable, you are using an Ethernet interface driver (NIC) installed in your computer. The interface driver handles the conversion of data between your computer and the Ethernet network, allowing you to transmit and receive data over the network.
+
+
+
+
