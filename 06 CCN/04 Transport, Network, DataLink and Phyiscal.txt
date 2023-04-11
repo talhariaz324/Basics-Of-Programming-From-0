@@ -39,6 +39,8 @@ Services:
             - Logical Addressing (Have IP of sender and receiver,,, router get help to which node this data belong to.)
             - Routing (Based on the IP, router identify the receiver and see which route would be best )
 
+Transport and Network Layer: Network Layer is do the actual transportation of data over the network. And the data from network to the application and from application to the network is done by the transport layer
+
 
     Data Link Layer: It is responsible for moving frames from one node to another node.
     Frame has header for mac address of sender and receiver(not actual node mac but the router mac because we move step by step) and here we have trailer for error handling

@@ -34,6 +34,7 @@ And these pages are available over the network.
 UDP (User Datagram Protocol) is a connectionless protocol that provides a lightweight mechanism for sending datagrams (or packets) between networked devices. UDP is often used for real-time applications, such as video or audio streaming, where speed and low latency are critical. Unlike TCP, UDP does not provide reliability or error correction mechanisms, and packets may be lost or delivered out of order. However, this also means that UDP can be faster and more efficient than TCP in certain situations.
             Connectionless mean that sender sends packets to the receiver without knowing he is active or not.
             Misconception: was that sender dont know the receiver and sends in the air. Because it is connectionless. But I was wrong.
+            Example: Video Call
 
 
 TCP (Transmission Control Protocol) is a connection-oriented protocol that provides reliable, ordered, and error-checked delivery of data between networked devices. TCP is often used for applications that require reliable and accurate transmission of data, such as file transfers, email, and web browsing. TCP establishes a virtual connection between devices and uses a system of acknowledgments and retransmissions to ensure that data is reliably delivered and received in the correct order. TCP is generally slower and more complex than UDP, but it is also more reliable and offers better error detection and recovery mechanisms.  
@@ -52,10 +53,16 @@ TCP (Transmission Control Protocol) is a connection-oriented protocol that provi
 
 Network Address Translation (NAT): 
 ON SEND:
-When device req to router then it has private IP address and random PORT number. BUT router change with public IP address and PORT number and req to ISP's.
+When device req to router then it has private IP address and random PORT number. BUT router change with public IP address and assign unique PORT number and req to ISP's.
 ON BACK:
 When a response comes from the server, Network Address Translation (NAT) is responsible for translating the server's IP address and port number to the appropriate private IP address and port number of the device within the local network. 
 
+DETAIL: Every Computer which is connected to the router have the local(private) IP address by the router.
+But the ISP gives the global(public and unique) IP address to the router,, and when we request then router uses NAT to give the public address to our private address and with that, requests to the respective server.
+    NAT gives the public address to the devices which are requesting to the router by using the one public IP address which was assigned to the router by the ISP.
+    How NAT give particular data to the device even using same public IP address?
+    NAT assign the unique and temporary PORT number to the each request. So identify using this PORT number and keep the record within the NAT table so that it can identify the each device because every request has the same public IP address (of router).
+    NOTE: This PORT number which is assigend to the request by the router in the NAT process is different from the the PORT number which has the application or process within the computer. This NAT assigend PORT is temporary.
 
 
 
