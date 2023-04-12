@@ -1,0 +1,52 @@
+IPv4: defines the connection of the device with computer. 
+        32 bit long.
+        Two devices on the internet cannot have the same IP address
+        2^32 === 4 Billion Ip addresses but they are still insufficent so we use the technique of NAT.
+
+IPv4 2 notations:
+    Binary: 01001101 01001101 01001101 01001101 --> 4 octets (8 bits in each)
+    Decimal Notaion: 127.168.7.1 --> 4 octets 
+
+Range 0 to 255
+
+Valid Ip addresses:
+Becausse satisfying the 4 octets and each range within the 0 to 255 and no octet has leading 0 like this 123.054.1 wrong
+10.10.56.80 
+172.168.1.1
+
+
+Converting the Binary to Decimal and decimal to binary IP addresses
+
+Table for solving it is:
+                    128 64 32 16 8 4 2 1
+
+Converting Binary to Decimal:
+            Step 1:          Write the Table
+                                                  
+Step 2: Write the binary Ip  each octet one
+by one.       
+Question is:            
+10000001  00001011  01001011    11101111
+Solution:
+      128         64          32          16          8       4        2    1
+      1            0           0           0          0       0        1
+So those who have 1 sum their decimal and that is your the decimal octet
+which 128+1 = 129
+
+So first octet is 129. Similarly get the remaining ones
+
+
+
+
+
+
+
+For decimal to Binary
+Q: 145.14.6
+Solution of 1st octet:
+
+ 128         64          32          16          8       4        2     1
+ Here check 145 come with whom values sum? Then make them 1 and others are 0. Here 128 + 16 + 1
+ 1            0          0           1           0       0         0     1
+ So binary of first octet is:
+ 10010001

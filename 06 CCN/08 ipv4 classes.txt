@@ -1,0 +1,37 @@
+There are 5 classes of the ipv4 and each class is identified with its range. As we defined the range for each class
+
+Class A   0 to 127 (decimal) General Purpose
+Class B   128 to 191    General Purpose
+Class C   192 to 223    General Purpose
+Class D   224 to 239    Multicast
+Class E   240 to 255    Experimental
+
+
+Similarly we can identify the IP class in the form of binary. You can check online the table of binary.
+
+NOTE: Range for both decimal and binary check from the 1st octet of the IP for identify the class
+
+
+
+Subnet Mask: when you talk about an IP address, it is always accompanied by a subnet mask. The subnet mask helps in determining the network and host portions of the IP address, which is essential for routing and communication within a network.
+
+The network portion of an IP address is used to identify the network to which the device belongs. Devices that are part of the same network share the same network portion in their IP addresses. This portion in form of octet. Like 1st octet show the network or 2 octet in ip show the network remaining shows the host.
+The host portion of an IP address identifies a specific device within that network.
+
+Subnet Mask is 32 bit long. Where it contains 255, it shows that octet is network and remaining are the host
+
+FOR EXAMPLE: 192.168.10.10 so the subnet accompanied with it is 255.255.0.0
+    So the first 2 octets are the network and remaining are the host
+
+Subnet mask also attach with the IP according to their class as above example the class of IP is C so the subnet is also of that class.
+
+
+Class     Range           Purpose                Subnet Mask                                        Number of possible                                                                                              networks and hosts
+
+Class A   0 to 127 (decimal) General Purpose        255.0.0.0  -- 1st is network                     1 bit is reserved as we know for identification of class A so remaining 7 bit left (as 1 octet for network) and 2^7 = 128 networks. and now we left with 24 bits as 8 are gone in networks so 2^24 = hosts in this. but from host -2 because 1 is for identifying network and 1 is for knwoing the broadcasting address of that network 
+Class B   128 to 191    General Purpose             255.255.0.0 -- 1st two are network               2 bit reserved in it (see the class table of ip in binary online) so two octect = 16 but as 2 reserved so 14 so 2^14 = networks and remaining left from 32 bits is 16 2^16 - 2 = host
+Class C   192 to 223    General Purpose             255.255.255.0 -- 1st three are network           3 bit reserved in it (see the class table of ip in binary online) so three octect = 24 but as 3 reserved so 21 so 2^21 = networks and remaining left from 8 bits is 16 2^8 - 2 = host
+
+One device has the IP 192.168.1.1 ,, Other device has the IP 192.169.1.1 
+So the class is C but the network is not same because 1st three octets are not same. If they same then they belong to same network
+
