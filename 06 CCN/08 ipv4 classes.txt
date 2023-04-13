@@ -28,10 +28,29 @@ Subnet mask also attach with the IP according to their class as above example th
 
 Class     Range           Purpose                Subnet Mask                                        Number of possible                                                                                              networks and hosts
 
-Class A   0 to 127 (decimal) General Purpose        255.0.0.0  -- 1st is network                     1 bit is reserved as we know for identification of class A so remaining 7 bit left (as 1 octet for network) and 2^7 = 128 networks. and now we left with 24 bits as 8 are gone in networks so 2^24 = hosts in this. but from host -2 because 1 is for identifying network and 1 is for knwoing the broadcasting address of that network 
+Class A   0 to 127 (decimal) General Purpose        255.0.0.0  -- 1st is network                     1 bit is reserved as we know for identification of class A so remaining 7 bit left (as 1 octet for network) and 2^7 = 128 networks. and now we left with 24 bits as 8 are gone in networks so 2^24 = hosts in this. but from host -2 because 1 is for identifying network and 1 is for knwoing the broadcasting address of that network. So first address for example 10.0.0.0 is not valid because of network and last address for example 10.255.255.255 is not valid because broadcast address. Same goes for class A and class B as per their starting range
 Class B   128 to 191    General Purpose             255.255.0.0 -- 1st two are network               2 bit reserved in it (see the class table of ip in binary online) so two octect = 16 but as 2 reserved so 14 so 2^14 = networks and remaining left from 32 bits is 16 2^16 - 2 = host
 Class C   192 to 223    General Purpose             255.255.255.0 -- 1st three are network           3 bit reserved in it (see the class table of ip in binary online) so three octect = 24 but as 3 reserved so 21 so 2^21 = networks and remaining left from 8 bits is 16 2^8 - 2 = host
 
-One device has the IP 192.168.1.1 ,, Other device has the IP 192.169.1.1 
-So the class is C but the network is not same because 1st three octets are not same. If they same then they belong to same network
+Example:
 
+One device has the IP 192.168.1.1 ,, Other device has the IP 192.169.1.1 
+So the class is C but the network is not same because 1st three octets are not same. If they same then they belong to same network and the communication would be possible in case of using switch. If the network is not same then use router
+
+So first identify class then according to its subnet mask check weather the IP has same network or not
+
+NOTE:
+We can use the class C subnet mask for the CLass A and Class B 
+We can use the Class B subnet mask for the Class A
+
+But class B can't use the class A subnet mask
+and class C cant use the class B and A subnet mask
+
+
+
+How host communicate?
+Unicast --> sender communicate with the destination with its IP address. ONE TO ONE communicatation
+Multi cast --> Sender communicate with the specific group of hosts 
+Broadcast --> Sends data to all the hosts within the network
+    Limited broadcast: Router do not forward data to other netwrok segment(subnet mask does not matching) just to the same netwrok segment
+    Directed broadcast: Router forward data to other netwrok segment as well
