@@ -47,10 +47,39 @@ But class B can't use the class A subnet mask
 and class C cant use the class B and A subnet mask
 
 
+NOTE: 127.0.0.1/8 that is prefix showing that the 8 bits are reserved for the network
+
+
 
 How host communicate?
 Unicast --> sender communicate with the destination with its IP address. ONE TO ONE communicatation
-Multi cast --> Sender communicate with the specific group of hosts 
-Broadcast --> Sends data to all the hosts within the network
+Multi cast Class D --> Sender communicate with the specific group of hosts 
+Broadcast  Class E --> Sends data to all the hosts within the network
     Limited broadcast: Router do not forward data to other netwrok segment(subnet mask does not matching) just to the same netwrok segment
     Directed broadcast: Router forward data to other netwrok segment as well
+
+
+How many netwrok addresses withn this address 10.200.240.4 and netwrok and broadcast addresses
+10.0.0.0 is the first network address
+10.255.255.255 is the broadcast address
+
+Number of addresses in the network are the host so the in class hosts are: 2^24 -2 
+
+
+DrawBack of the classful addressing: is that if we need to connect 300 hosts then we have to use the class B because class C only allows 254 hosts. But in class B we would use 300 hosts only but remaining ip addresses are just waste.
+Similarly, more ip addresses use more space in the router table. so solution is to use the classless addresses.
+
+Classless Addressing: In which we can use the ip addressess as per our need because we make subnet mask as per own requirement.
+
+Classless Addrssing formal name is CIDR (classless inter domain routing)
+Create a new set of standards  that allow service providers  to allocate the ipv4 addressess on any address bit boundry (prefix length) instead of only by class A, B and C 
+
+Classless addressing possible with the help of the subnetting (Discuss soon)
+
+Becasue we are going to make our own subnet mask so we should know what kind of value allow for the subnet mask
+Valid subnet values: 255, 254, 252, 248. 240, 224, 192, 128, 0
+WHY they are valid?
+Because when we convert them into binary then we come across the consective 1 and then start consective 0. 
+There would not be the case like 1100111011,, no mixture of 0 and 1. Only occur in consective order.
+
+The subnet mask values with consecutive 1s and 0s are used to determine the network portion and host portion of an IP address. The consecutive 1s in the subnet mask represent the network portion, and the consecutive 0s represent the host portion.
