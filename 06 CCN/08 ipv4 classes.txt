@@ -47,7 +47,7 @@ But class B can't use the class A subnet mask
 and class C cant use the class B and A subnet mask
 
 
-NOTE: 127.0.0.1/8 that is prefix showing that the 8 bits are reserved for the network
+NOTE: 127.0.0.1/8 that is prefix showing that the 8 bits are reserved for the network which means class A
 
 
 
@@ -83,3 +83,5 @@ Because when we convert them into binary then we come across the consective 1 an
 There would not be the case like 1100111011,, no mixture of 0 and 1. Only occur in consective order.
 
 The subnet mask values with consecutive 1s and 0s are used to determine the network portion and host portion of an IP address. The consecutive 1s in the subnet mask represent the network portion, and the consecutive 0s represent the host portion.
+
+

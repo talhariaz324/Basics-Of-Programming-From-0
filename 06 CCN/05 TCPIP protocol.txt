@@ -36,7 +36,7 @@ Protocols Include: NAT, ARP, ICMP, RIP, OSPF, EIGRP, BGP
 
 
 4- Network Access
-    Controls the hardware devices and media that make uo the network
+    Controls the hardware devices and media that make up the network
     Means physical, and the network and data link layer actually media for which network established
 
     Protocols Include: PPP, Ethernet, Interface drivers

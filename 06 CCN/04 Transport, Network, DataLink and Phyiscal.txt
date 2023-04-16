@@ -1,8 +1,9 @@
+Segments: Segments are units of data that are used in the transport layer of the protocol stack. They are composed of a header and a payload, where the header contains information such as the source and destination port numbers and the seqquence number to reassemble the data at receiver side, and the payload contains the data from the application layer. Segments are used to establish and manage connections between applications running on different devices.
+
 Packets: Packets are units of data that are used in the network layer of the protocol stack. They are composed of a header and a payload, where the header contains information such as the source and destination IP addresses, and the payload contains the actual data being transmitted. Packets are routed through the network based on the destination IP address.
 
 Frames: Frames are units of data that are used in the data link layer of the protocol stack. They are composed of a header and a payload, where the header contains information such as the source and destination MAC addresses, and the payload contains the packet from the network layer. Frames are used to transmit data between devices on the same physical network.
 
-Segments: Segments are units of data that are used in the transport layer of the protocol stack. They are composed of a header and a payload, where the header contains information such as the source and destination port numbers and the seqquence number to reassemble the data at receiver side, and the payload contains the data from the application layer. Segments are used to establish and manage connections between applications running on different devices.
 
 
 
