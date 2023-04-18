@@ -42,3 +42,56 @@ Each range can communicate within itself hosts using switch
 But one range cant communicate with other range using switch because now the network change based on the subnet 255.255.255.192
 
 Similarly each range has first address for the netwrok and the last address for the broadcast address of the network.
+
+
+
+Different scenrios for SG:
+    Maybe the SG become in the third octet then again start count that octet acc to table. and determine the SG
+
+For Example: You get the SG 2 in the third octet then ranges of networks would be:
+Supoose Given Ip was 150.15.0.0
+
+150.15.0.0              Ending 150.15.1.255 Because the next starting is 150.15.2.0 so we come till 1.255 
+add SG
+150.15.2.0  here not 150.15.0.2 because we are in third octet and so the 2 of third octet is actually allow the 512 are hosts alloed so we have to jump of 2... Ending would be 150.15.3.255
+
+150.15.4.0 150.15.5.255
+150.15.6.0 150.15.7.255
+150.15.8.0 
+    SO on until the actaul ip get to end.
+
+
+
+
+Another case: 128 is SG and starting IP is 10.0.0.0
+
+10.0.0.0       Ending 10.0.0.127
+add 128 
+10.0.0.128          10.0.0.255 becasue next start after this 
+add 128 = 512 so we dont write 512 instead we make it 0 and add 1 to previous octet
+10.0.1.0    10.0.1.127
+10.0.1.128  10.0.1.255
+10.0.2.0    10.0.2.127
+
+
+
+
+
+Troubleshooting: For Example we have given with the host which has IP and Subnet.
+But it unable to communicate with the other hosts of its network so we have to troubleshoot this.
+
+We will be given with the IP and its subnet.
+                                            192.168.1.127 and subnet is 255.255.255.224
+SOlution:
+    We convert its  subnet into the binary    11111111.11111111.11111111.11100000 so SG is 32
+    Get the SG  32
+    Make the network range.
+            192.168.1.0 192.168.1.31
+            192.168.1.32 192.168.1.63
+            192.168.1.64 192.168.1.95
+            192.168.1.96 192.168.1.127 Here our IP.
+            192.168.1.128 192.168.1.159
+    Check weather the IP which is given to the host neiher a network address nor a broadcast address.
+    If it is then we identify the problem
+
+        So our problem is that our host has the IP address which was for the network broadcast that was the problem 
