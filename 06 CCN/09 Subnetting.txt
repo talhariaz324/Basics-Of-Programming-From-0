@@ -52,7 +52,7 @@ For Example: You get the SG 2 in the third octet then ranges of networks would b
 Supoose Given Ip was 150.15.0.0
 
 150.15.0.0              Ending 150.15.1.255 Because the next starting is 150.15.2.0 so we come till 1.255 
-add SG
+add SG at their octet
 150.15.2.0  here not 150.15.0.2 because we are in third octet and so the 2 of third octet is actually allow the 512 are hosts alloed so we have to jump of 2... Ending would be 150.15.3.255
 
 150.15.4.0 150.15.5.255
@@ -95,3 +95,46 @@ SOlution:
     If it is then we identify the problem
 
         So our problem is that our host has the IP address which was for the network broadcast that was the problem 
+
+
+Troubleshoot No:2 
+Solution:
+    1- Convert the subnet into the binary
+    2- Get the SG
+    3- Make the ranges
+    We found that host IP addresses was not netwrok address and not a broadcast address. Then what is the reason?
+    Reason was that Host belong to other network and the gateway belong to some other network. and we are communicating them using the switch. So here is problem.
+
+    Change the host IP to the same network of the gateway is the solution
+
+    
+    For finding the network address of the given IP
+    Solution:
+        You can use above method and the the IP range, first address would be the network address.
+        2nd Method:
+            Take binary of given Ip
+            Take binary of given subnet
+                Do And operation on them
+            Result is in binary and convert into decimal
+            This is your netwrok address
+
+            FOR EXAMPLE IP: 25.34.12.56/16 then its subnet mask is of 255.255.0.0 because this binary has 16 bits for network 
+
+
+    For Finding the broadcast address of the given IP 
+         You can use traditional as above method and the particular IP range, last address would be the broadcast address.
+         2nd Method:
+            Take binary of the given IP
+            Take binary of the given subnet
+            Take 1's complement of the subnet Binary
+                Do the OR operation with the binary of IP and the complemented binary
+            Result in binary and convert into decimal and this is result
+
+
+        Example: An organization using class B for its 64 departments. But now to do the classless so give the subnet for this.
+        Solution: 
+            Here we have to make network of 64 departments (not here hosts dependend,, here network dependend)
+            Step 1: Take binary of the Class B subnet 11111111.11111111.00000000.00000000
+            Step 2: Now we need netwrok for 64 department means 2^6. so we need 6 bits to reserve in the default subnet binary
+            Step 3: 11111111.11111111.11111100.00000000 Here note that we reserve bit from left not right because here we are preparing based on the network not the host. So the reserve bits should be consective with netwrok side.
+            Step 4: Convert into the decimal and that is yours subnet
