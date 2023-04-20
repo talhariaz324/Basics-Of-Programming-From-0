@@ -138,3 +138,34 @@ Solution:
             Step 2: Now we need netwrok for 64 department means 2^6. so we need 6 bits to reserve in the default subnet binary
             Step 3: 11111111.11111111.11111100.00000000 Here note that we reserve bit from left not right because here we are preparing based on the network not the host. So the reserve bits should be consective with netwrok side.
             Step 4: Convert into the decimal and that is yours subnet
+
+
+
+        Example: Class B has subnet mask is 255.255.248.0, how many hosts are possible?
+        Solution:
+            Binary of subnet is: 11111111.11111111.11111000.0000000
+            So left the first 2 octets as they are 255.255 and the 3rd and 4th octet are where we check:
+            3rd octet has 5 1's so 2^5 are subnets
+            and total 0's in 3rd and 4th are 2^11 -2 = 2046
+
+        
+        Example: Class B and use 6 bit subnet then tell how many subnets and host possible maximum
+        Solution:
+            Default subnet binary
+            Add 6 bits as reserve in third octet as first 2 are non changeable. As we are dealing with subnet so left to right
+            Take 2^6 = subnet  -2  here -2 because we have to find maximum
+            Take 2^10 = hosts - 2
+
+        
+        Example: Given C1 computer and C2 computer. Both have IP and subnet given. Question is that what c1 thinks about c2 either same network or not or what c2 thinks about C2
+        Solution:
+        We can simply do and operation of the IP with subnet and get the network address for C1 and C2 respectively. If they match then same network else not.
+        But here also check what they think about each other.
+
+        So actually when the C1 has to communicate with the C2 it use its Ip address and do the and operation with its subnet to get the network address. If this matches
+        the C1 network address then they are on the same network else not according to the C1.
+        Similarly, C2 also do the same thing while communicating with C1 and if it find same then consider both are on same network otherwise think C1 is on different network 
+
+        Example: Given A and B computers with their Ip's. Options have given subnet mask and question is that which subnet mask shows they are on different netwrok
+        Solution: Take Computer 1 Ip and do AND operation with the OPTION A subnet mask = network address , then do same for computer B. If both network address match then they are on same netwrok if not then on different netwrok. 
+        DO this for all options when you find not matching the same network address then it means this is the subnet where both A and B are not on same netwrok
