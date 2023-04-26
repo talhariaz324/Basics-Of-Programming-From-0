@@ -169,3 +169,36 @@ Solution:
         Example: Given A and B computers with their Ip's. Options have given subnet mask and question is that which subnet mask shows they are on different netwrok
         Solution: Take Computer 1 Ip and do AND operation with the OPTION A subnet mask = network address , then do same for computer B. If both network address match then they are on same netwrok if not then on different netwrok. 
         DO this for all options when you find not matching the same network address then it means this is the subnet where both A and B are not on same netwrok
+
+
+
+    Fixed Length Subnet masking: Suppose the 6 networks connected to each other. Then if we go with classful then we use the Class as per the need of hosts. Here suppose max use of hosts are 20 then definately go with class C. But here we would lost alot of IP's in the one network and also the other networks which require less hosts then there more ips would be lost.
+    As its fixed length subnetting then the subnet mask should be same for each network.
+
+
+    ClassLess: Here we do classless subnetting (here as we have 6 networks so do the subnetting of the network which require max hosts) and assign the to each network with the same subnet mask which we would drived in classless.
+        Here also lost Ip's but less. and the loss get increase as the other networks maybe require less hosts than the more ips lost.
+
+        For this solution we use the VLSM (Variable length Subnet Mask)
+
+
+    VLSM: As above we do the subnetting by taking the max number of host and assign each range to each network and many ip get lose because every network demand for host is different(less than max)
+
+    In this wo do the subnetting for the max hosts require and generate the 1st range. 
+    But for generating the 2nd range we change the hosts from max to 2nd last max. 
+    and add that SG to the new octet position. Now this 2nd range is for the 2nd netwrok.
+    Now Similarly do for the third and fourth and fifth and sixth networks.
+
+NOTE:
+    Now our subnet would not be remain same for all networks. instead we have differnet subnet masks for each network.
+    These subnet masks we get by following the steps of classless. in the third step when we get the SG and octet. There when we left with remaining 1's after fixing the 0's for the host bits. These count bits show with the ip like
+
+    123.126.112.15 /27  These are actually the count of 1's in new subnet binary and when we convert that binary then may get like 255.255.254.254,,, something like that. 
+    123.126.112.15 /25 
+    123.126.112.15 /24 
+
+Example: If given an Ip with subnet mask and ask to divide it  it half for A and quater for B and C 
+
+Solution: Get the subnet binary.
+            The number of 0's will tell the total number of host like 2^6 maybe. 6 are the 0's
+            Divide the this 2^6/2(half) = A and 2^6/4 to B and C
