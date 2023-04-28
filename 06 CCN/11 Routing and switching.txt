@@ -10,6 +10,9 @@ For example, let's say you are browsing the internet on your computer. Your comp
 
 Routing is important for designing and maintaining efficient and reliable networks. It helps prevent network congestion and ensures that data packets arrive at their destination quickly and securely.
 
+Routing protocols: There are different routing protocols that network administrators can use to determine the best path for network traffic. Each protocol has its own strengths and weaknesses, and the choice of protocol will depend on the specific needs of the network. Some common routing protocols include OSPF, BGP, and EIGRP.
+
+
 Switching:
 
 Switching is the process of forwarding data packets between devices on a network. When data packets are sent from one device to another on the same network, they must pass through a switch.
