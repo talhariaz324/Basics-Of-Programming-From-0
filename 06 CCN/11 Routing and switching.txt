@@ -25,3 +25,12 @@ In summary, routing and switching are two critical processes in computer network
 
 
 
+
+
+
+Unmanaged switches: Unmanaged switches are basic switches that operate without any configuration required. They are typically used in small networks where there is no need for advanced features or management capabilities. Unmanaged switches are simple and easy to use, but they lack the ability to configure or manage the switch.
+
+Managed switches: Managed switches are more advanced switches that provide greater control and management capabilities. They can be configured to prioritize network traffic, monitor network performance, and configure virtual LANs (VLANs). Managed switches typically come with a graphical user interface (GUI) or command line interface (CLI) that allows network administrators to configure and manage the switch.
+
+Layer 3 switches: Layer 3 switches are switches that have routing capabilities built in. They can forward traffic based on IP addresses, and can perform advanced routing functions such as access control lists (ACLs) and Quality of Service (QoS) prioritization. Layer 3 switches are typically used in medium to large enterprise networks where routing functionality is required, but a separate router is not necessary.
+
